@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import { Button } from 'react-native-paper';
-import { LoginButton, AccessToken } from 'react-native-fbsdk';
 
 import styles from './styles';
 import PropTypes from 'prop-types';
@@ -43,25 +42,7 @@ export default class SplashScreen extends Component {
                 <Button raised color="#0084ff" onPress={this.onPress}>
                     CONTINUE AS USER
                 </Button>
-                {/* <LoginButton
-                    readPermissions={['public_profile', 'email']}
-                    onLoginFinished={(error, result) => {
-                        if (error) {
-                            console.log('login has error: ' + result.error);
-                        } else if (result.isCancelled) {
-                            console.log('login is cancelled.');
-                        } else {
-                            AccessToken.getCurrentAccessToken().then(data => {
-                                console.log('DAtadsdsd :', data);
-
-                                console.log(data.accessToken.toString());
-                                this.initUser(data.accessToken.toString());
-                                this.onPress();
-                            });
-                        }
-                    }}
-                    onLogoutFinished={() => console.log('logout.')}
-                /> */}
+                {}
             </SafeAreaView>
         );
     }
